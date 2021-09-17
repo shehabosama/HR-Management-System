@@ -32,9 +32,12 @@ public class go {
     private static void setURL()
     {
         //jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false&amp;serverTimezone=UTC
-         url = "jdbc:mysql://localhost:3306/company?useSSL=false&amp;serverTimezone=UTC;useUnicode=true&characterEncoding=UTF-8";
+        url = "jdbc:mysql://localhost:3306/company?useSSL=false&amp;serverTimezone=UTC;useUnicode=true&characterEncoding=UTF-8";
         //url = "jdbc:mysql://192.168.43.222:3306/company?useUnicode=true&characterEncoding=UTF-8";
        // url = "jdbc:mysql://localhost:3306/company?useUnicode=true&characterEncoding=UTF-8";
+         //pass = r(8UL*AWA}S@
+         // DB & user == abdallaa_shesho
+         //con  = DriverManager.getConnection(url,"hbstudent","hbstudent");
         try {
             Class.forName ("com.mysql.jdbc.Driver");
         } catch (ClassNotFoundException ex) {

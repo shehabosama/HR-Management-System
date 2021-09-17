@@ -44,7 +44,7 @@ public class WorkOn implements mainData {
         boolean isAdd = db.go.runNonQuery(strAdd);
         if(isAdd)
         {
-            Tools.msgBox("project is ");
+            Tools.msgBox("project is added ");
         }
     }
     
