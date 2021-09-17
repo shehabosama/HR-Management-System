@@ -22,6 +22,7 @@ create table employee(
     adderss varchar(200),
     sallary double,
     hiringdate date,
+    birthdate date,
     deptno int,
     foreign key(deptno) references department(deptno)
 );
@@ -55,7 +56,7 @@ birthdate as 'birth_of_date',
 department.deptno,
 deptname as 'department'
 from employee , department
-where employee.deptno = department.deptno
+where employee.deptno = department.deptno;
 
 
 
@@ -63,7 +64,7 @@ create view department_data
 as select 
 deptno as 'department_no',
 deptname as 'department'
-from department
+from department;
 
 
 
@@ -73,7 +74,7 @@ create view employee_phone_data
  employee.empno as 'employee_no',
  empname as 'name',
  phone from employee,employee_phone 
-where employee_phone.empno = employee.empno
+where employee_phone.empno = employee.empno;
 
 
 create view project_data 
@@ -84,7 +85,7 @@ project.location,
 project.deptno as 'department_no',
 deptname as 'department'
 from project,department
-where project.deptno=department.deptno
+where project.deptno=department.deptno;
 
 
 create view work_on_data
@@ -94,4 +95,4 @@ workon.projectno as 'project_no',
 projectname as 'project_name'
 from project,employee,workon
 where workon.empno = employee.empno
-and project.projectno = workon.projectno
+and project.projectno = workon.projectno;
