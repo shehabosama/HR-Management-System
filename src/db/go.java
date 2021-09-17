@@ -31,7 +31,9 @@ public class go {
     // this is the data base url to connection data base
     private static void setURL()
     {
-        url = "jdbc:mysql://192.168.43.222:3306/company?useUnicode=true&characterEncoding=UTF-8";
+        //jdbc:mysql://localhost:3306/hb_student_tracker?useSSL=false&amp;serverTimezone=UTC
+         url = "jdbc:mysql://localhost:3306/company?useSSL=false&amp;serverTimezone=UTC;useUnicode=true&characterEncoding=UTF-8";
+        //url = "jdbc:mysql://192.168.43.222:3306/company?useUnicode=true&characterEncoding=UTF-8";
        // url = "jdbc:mysql://localhost:3306/company?useUnicode=true&characterEncoding=UTF-8";
         try {
             Class.forName ("com.mysql.jdbc.Driver");
@@ -44,7 +46,7 @@ public class go {
     {
         try {
             setURL(); 
-            con  = DriverManager.getConnection(url,"test","test");
+            con  = DriverManager.getConnection(url,"hbstudent","hbstudent");
                     } catch (SQLException ex) {
                         Tools.msgBox(ex.getMessage());
         }

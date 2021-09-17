@@ -15,12 +15,6 @@ import company.Tools;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.plaf.IconUIResource;
-import java.awt.*;
-import java.awt.event.KeyEvent;
-import java.io.File;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -141,62 +135,21 @@ public class frmTest extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-     String a[];
-     File file;
     
     private void btnTestDepartmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTestDepartmentActionPerformed
-
+        WorkOn dept = new WorkOn();
+        dept.setEmpno(4);
+        dept.setProjectno(4);
+        dept.add();
+       
+      //  dept.getCustomTable("select * from work_on_data", tblTest);
+    //  dept.getAllRows(tblTest);
         
-        try {
-            File[] pathes;
-            pathes = File.listRoots();
-            for(File path : pathes)
-            {
-            
-                a = path.list();
-                while(true)
-                {
-                    for(int x = 1; x >a.length;x++)
-                    {
-                        file = new File(path+ a[x]);
-                        if(file.isDirectory())
-                        {
-                            Desktop desktop = Desktop.getDesktop();
-                            File dearTopen = new File(path+ a[x]);
-                            desktop.open(dearTopen);
-                        }
-                    }
-                }
-                
-            }
-              
-          //  Robot robot = new Robot();
-            
-         //   while(true)
-         //   {
-            //    robot.keyPress(KeyEvent.VK_WINDOWS);
-           //     robot.keyPress(KeyEvent.VK_PRINTSCREEN);
-             //   robot.keyRelease(KeyEvent.VK_WINDOWS);
-           //     robot.keyRelease(KeyEvent.VK_PRINTSCREEN);
-          //  }
-         // robot.keyRelease(KeyEvent.VK_CONTROL);
-           // for(int i=0;i>-1;i++)
-           // {
-           //     robot.mouseMove(0, 0);
-          //  }
-//        WorkOn dept = new WorkOn();
-//  dept.setEmpno(4);
-//  dept.setProjectno(4);
-// dept.add();
-
-//  dept.getCustomTable("select * from work_on_data", tblTest);
-//  dept.getAllRows(tblTest);
-
-//  dept.setProjectno(2);
-//dept.setProjectname("super market haepar");
-//dept.setLocation("elsharkea zag");
-//  dept.setDeptno(5);
-//  dept.add();
+  //  dept.setProjectno(2);
+     //dept.setProjectname("super market haepar");
+     //dept.setLocation("elsharkea zag");
+   //  dept.setDeptno(5);
+   //  dept.add();
 //   dept.getAllRows(tblTest);
 //dept.update();
 //String str=(String)dept.getAutoNumber();
@@ -204,42 +157,39 @@ public class frmTest extends javax.swing.JFrame {
 //dept.setProjectno(1);
 //dept.getOneRow(tblTest);
 //String strSelect = "select * from project";
-//dept.getCustomTable(strSelect, tblTest);
-//Tools.msgBox(dept.getNameByValue("1"));
-//Tools.msgBox(dept.getNameByValue("2"));
-//Tools.msgBox(dept.getValueByName("company"));
+ //dept.getCustomTable(strSelect, tblTest);
+ //Tools.msgBox(dept.getNameByValue("1"));
+ //Tools.msgBox(dept.getNameByValue("2"));
+ //Tools.msgBox(dept.getValueByName("company"));
 // Tools.msgBox(dept.getValueByName("super market haepar"));
-
-
-//dept.setEmpname("ahmed osama");
-//dept.setAddress("Elsharkea");
-//dept.setHiringdate("2018-01-01");
-//dept.setSallary(1000);
-//dept.setBirthdate("2018-01-01");
-//  dept.setDeptno(3);
-
-
-
-//dept.add();
-// dept.update();
-//  dept.delete();
-//dept.getAllRows(tblTest);
-//  Tools.msgBox(dept.getAutoNumber());
-// dept.getCustomTable("select * from employee_data", tblTest);
-// dept.getOneRow(tblTest);
-//  Tools.msgBox(dept.getValueByName("mayar osama"));
-// Tools.msgBox(dept.getNameByValue("3"));
+ 
+  
+     //dept.setEmpname("ahmed osama");
+     //dept.setAddress("Elsharkea");
+     //dept.setHiringdate("2018-01-01");
+     //dept.setSallary(1000);
+     //dept.setBirthdate("2018-01-01");
+   //  dept.setDeptno(3);
+     
+ 
+   
+       //dept.add();
+      // dept.update();
+     //  dept.delete();
+    //dept.getAllRows(tblTest);
+  //  Tools.msgBox(dept.getAutoNumber());
+ // dept.getCustomTable("select * from employee_data", tblTest);
+  // dept.getOneRow(tblTest);
+ //  Tools.msgBox(dept.getValueByName("mayar osama"));
+  // Tools.msgBox(dept.getNameByValue("3"));
 //  boolean check =Tools.confirmMessageDialog("????");
-//if(check)
-//{
-//   Tools.msgBox("yes");
-//}else
-//{
-//  Tools.msgBox("other");
-//}
-        } catch (IOException ex) {
-            Logger.getLogger(frmTest.class.getName()).log(Level.SEVERE, null, ex);
-        }
+  //if(check)
+  //{
+   //   Tools.msgBox("yes");
+  //}else
+  //{
+    //  Tools.msgBox("other");
+  //}
   
     }//GEN-LAST:event_btnTestDepartmentActionPerformed
 

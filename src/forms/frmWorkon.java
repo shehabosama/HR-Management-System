@@ -113,7 +113,7 @@ public class frmWorkon extends javax.swing.JFrame {
         rdoNumberProject.setText("number project");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jLabel4.setText("work on form");
+        jLabel4.setText("Department form");
 
         rdoNameEmp.setText("employee");
 

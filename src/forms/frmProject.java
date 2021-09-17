@@ -140,7 +140,7 @@ public class frmProject extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Tekton Pro", 1, 24)); // NOI18N
-        jLabel1.setText("project  Form");
+        jLabel1.setText("Employee Form");
 
         rdoName.setText("Name");
 

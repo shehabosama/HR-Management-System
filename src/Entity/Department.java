@@ -83,13 +83,13 @@ public class Department implements mainData {
     @Override
     public void getAllRows(JTable table) 
     {
-        db.go.fillToJTable("department_data", table);
+        db.go.fillToJTable("department", table);
     }
 
     @Override
     public void getOneRow(JTable tabel) 
     {
-        String strSelect = "select * from department_data "
+        String strSelect = "select * from department "
                 +" where department_No="+deptno;
         db.go.fillToJTable(strSelect, tabel);
     }
@@ -101,19 +101,20 @@ public class Department implements mainData {
     }
 
     @Override
-    public String getValueByName(String value)
+    public String getValueByName(String name)
     {
-        String srtSelect = "select deptno from department "
-                +" where deptname='"+value+"'";
+         String srtSelect = "select deptno from department "
+                +" where deptname='"+name+"'";
         String strVal = (String) db.go.getTableData(srtSelect).items[0][0];
         return strVal;
     }
 
     @Override
-    public String  getNameByValue(String name)
+    public String  getNameByValue(String value)
     {
+        
          String srtSelect = "select deptname from department "
-                +" where deptno="+name;
+                +" where deptno='"+value+"'";
         String strName = (String) db.go.getTableData(srtSelect).items[0][0];
         return strName;
     }

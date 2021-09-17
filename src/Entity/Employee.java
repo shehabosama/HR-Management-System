@@ -2,6 +2,7 @@
 package Entity;
 
 import company.Tools;
+import java.util.logging.Logger;
 import javax.swing.JTable;
 
 public class Employee implements mainData {
@@ -12,6 +13,13 @@ public class Employee implements mainData {
     private String hiringdate;
     private String birthdate;
     private int deptno;
+
+    @Override
+    public String toString() {
+        return super.toString(); //To change body of generated methods, choose Tools | Templates.
+    }
+
+   
 
     public int getEmpno() {
         return empno;
@@ -72,7 +80,8 @@ public class Employee implements mainData {
     @Override
     public void add() 
     {
-         String insert ="INSERT INTO employee  VALUES (" + "\"" + empno + "\"" +","+ "\"" + empname + "\"" +","+ "\"" + address + "\"" +","+ "\"" + sallary + "\""+","+ "\"" + hiringdate + "\""+","+ "\"" + deptno + "\""+","+ "\"" + birthdate + "\""+");";
+                  String insert ="INSERT INTO employee (empno, empname, adderss, sallary , hiringdate , birthdate , deptno)  VALUES (" + "\"" + empno + "\"" +","+ "\"" + empname + "\"" +","+ "\"" + address + "\"" +","+ "\"" + sallary + "\""+","+ "\"" + hiringdate + "\""+","+ "\"" +birthdate  + "\""+","+ "\"" + deptno + "\""+");";
+
       
       boolean isadd = db.go.runNonQuery(insert);
       

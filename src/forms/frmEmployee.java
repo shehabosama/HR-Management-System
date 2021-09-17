@@ -567,20 +567,25 @@ public class frmEmployee extends javax.swing.JFrame {
     
     public void setValues()
     {
+         System.out.println("_________________________________________________");
         emp.setEmpno(Integer.parseInt(txtNumber.getText()));
         emp.setEmpname(txtName.getText());
         emp.setSallary(Double.parseDouble(txtSalary.getText()));
         emp.setAddress(txtAddress.getText());
         SimpleDateFormat f = new SimpleDateFormat("yyyy-MM-dd");
-        
+        System.out.println("_________________________________________________");
         String HDate = String.valueOf(f.format(txtHiring.getDate()));
         String BDate = String.valueOf(f.format(txtBirth.getDate()));
         emp.setHiringdate(HDate);
         emp.setBirthdate(BDate);
-        
+        System.out.println("_________________________________________________");
         String dName = cbxDepartment.getSelectedItem().toString();
+         System.out.println("_________________________________________________");
         String dNo = dept.getValueByName(dName);
+         System.out.println("_________________________________________________");
         emp.setDeptno(Integer.parseInt(dNo));
+       
+       
     }
     private void btnAddDepartmentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddDepartmentActionPerformed
 

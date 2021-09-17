@@ -260,7 +260,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Tekton Pro" size="24" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="project  Form"/>
+        <Property name="text" type="java.lang.String" value="Employee Form"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rdoName">

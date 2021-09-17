@@ -43,9 +43,9 @@ public class Company {
         }catch(IOException e){System.out.println(e);}
       */  
         
-     Tools.openForm(new frmLogin());
-    //Tools.openForm(new frmEmployee());
-    //  Tools.openForm(new frmDepartment());
+     //Tools.openForm(new frmLogin());
+    Tools.openForm(new frmEmployee());
+     // Tools.openForm(new frmDepartment());
   // Tools.openForm(new frmTest());
      //Tools.openForm(new frmProject());
      //Tools.openForm(new frmWorkon());

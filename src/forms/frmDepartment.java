@@ -379,14 +379,14 @@ public class frmDepartment extends javax.swing.JFrame {
     }//GEN-LAST:event_tblDeptMouseClicked
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
-        String strSearch = "select * from department_data where ";
+        String strSearch = "select * from department where ";
         
         if(rdoNumber.isSelected())
         {
-            strSearch +="department_no";
+            strSearch +="deptno";
         }else if(rdoName.isSelected())
         {
-            strSearch +="department";
+            strSearch +="deptname";
             
         }else
         {
